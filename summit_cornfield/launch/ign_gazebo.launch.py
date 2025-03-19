@@ -18,14 +18,11 @@ def generate_launch_description():
     package_name = "summit_xl_description"  # Nombre del paquete con el robot
     desc_package_name = get_package_share_directory(package_name)
 
-    # Configurar variable de entorno para Ignition Gazebo
-    # ign_resource_path = SetEnvironmentVariable(
-    #     name="IGN_GAZEBO_RESOURCE_PATH",
-    #     value=[
-    #         os.path.join(desc_package_name, "worlds"),
-    #         ":" + str(Path(desc_package_name).parent.resolve()),
-    #     ],
-    # )
+    set_ign_gazebo_resource_path = SetEnvironmentVariable(
+        name="IGN_GAZEBO_RESOURCE_PATH",
+        value=os.getenv("IGN_GAZEBO_RESOURCE_PATH", "") + ":" + os.path.join(pkg_path, "models")
+    )
+
 
     # Archivo Xacro
     xacro_file = PathJoinSubstitution([
@@ -190,7 +187,7 @@ def generate_launch_description():
     # Retornar la descripción del Launch
     return LaunchDescription([
         DeclareLaunchArgument("use_sim_time", default_value="true", description="Use sim time if true"),
-        # ign_resource_path,
+        set_ign_gazebo_resource_path,
         robot_state_publisher_node,
         start_ignition_cmd,
         spawn_entity,

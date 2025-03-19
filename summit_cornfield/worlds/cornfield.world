@@ -1,6 +1,30 @@
-<?xml version="1.0" ?>
-<sdf version="1.7">
+<?xml version="1.0"?>
+<sdf version="1.9">
   <world name="default">
+    <plugin
+        filename="ignition-gazebo-physics-system"
+        name="ignition::gazebo::systems::Physics">
+    </plugin>
+    <!-- Allows to use the "Create" service" -->
+    <plugin
+        filename="libignition-gazebo-user-commands-system.so"
+        name="ignition::gazebo::systems::UserCommands">
+    </plugin>
+    <plugin
+        filename="libignition-gazebo-scene-broadcaster-system.so"
+        name="ignition::gazebo::systems::SceneBroadcaster">
+    </plugin>
+
+    <plugin filename="libignition-gazebo-imu-system.so"
+            name="ignition::gazebo::systems::Imu">
+    </plugin>
+    
+    <plugin
+        filename="libignition-gazebo-sensors-system.so"
+        name="ignition::gazebo::systems::Sensors">
+        <render_engine>ogre2</render_engine>
+    </plugin>
+
     <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so">
       <update_rate>1.0</update_rate>
     </plugin>
@@ -154,23 +178,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -213,23 +242,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -272,23 +306,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -331,23 +370,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -390,23 +434,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -449,23 +498,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -508,23 +562,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -567,23 +626,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -626,23 +690,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -685,23 +754,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -744,23 +818,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -803,23 +882,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -862,23 +946,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -921,23 +1010,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -980,23 +1074,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1039,23 +1138,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1098,23 +1202,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1157,23 +1266,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1216,23 +1330,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1275,23 +1394,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1334,23 +1458,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1393,23 +1522,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1452,23 +1586,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1511,23 +1650,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1570,23 +1714,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1629,23 +1778,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1688,23 +1842,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1747,23 +1906,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1806,23 +1970,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1865,23 +2034,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1924,23 +2098,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -1983,23 +2162,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2042,23 +2226,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2101,23 +2290,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2160,23 +2354,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2219,23 +2418,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2278,23 +2482,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2337,23 +2546,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2396,23 +2610,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2455,23 +2674,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2514,23 +2738,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2573,23 +2802,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2632,23 +2866,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2691,23 +2930,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2750,23 +2994,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2809,23 +3058,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2868,23 +3122,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2927,23 +3186,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -2986,23 +3250,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3045,23 +3314,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3104,23 +3378,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3163,23 +3442,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3222,23 +3506,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3281,23 +3570,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3340,23 +3634,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3399,23 +3698,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3458,23 +3762,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3517,23 +3826,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3576,23 +3890,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3635,23 +3954,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3694,23 +4018,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3753,23 +4082,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3812,23 +4146,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3871,23 +4210,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3930,23 +4274,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -3989,23 +4338,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4048,23 +4402,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4107,23 +4466,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4166,23 +4530,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4225,23 +4594,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4284,23 +4658,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4343,23 +4722,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4402,23 +4786,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4461,23 +4850,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4520,23 +4914,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4579,23 +4978,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4638,23 +5042,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4697,23 +5106,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4756,23 +5170,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4815,23 +5234,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4874,23 +5298,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4933,23 +5362,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -4992,23 +5426,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5051,23 +5490,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5110,23 +5554,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5169,23 +5618,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5228,23 +5682,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5287,23 +5746,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5346,23 +5810,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5405,23 +5874,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5464,23 +5938,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5523,23 +6002,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5582,23 +6066,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5641,23 +6130,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5700,23 +6194,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5759,23 +6258,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5818,23 +6322,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5877,23 +6386,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5936,23 +6450,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -5995,23 +6514,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6054,23 +6578,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6113,23 +6642,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6172,23 +6706,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6231,23 +6770,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6290,23 +6834,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6349,23 +6898,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6408,23 +6962,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6467,23 +7026,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6526,23 +7090,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6585,23 +7154,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6644,23 +7218,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6703,23 +7282,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6762,23 +7346,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6821,23 +7410,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6880,23 +7474,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6939,23 +7538,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -6998,23 +7602,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7057,23 +7666,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7116,23 +7730,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7175,23 +7794,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7234,23 +7858,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7293,23 +7922,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7352,23 +7986,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7411,23 +8050,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7470,23 +8114,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7529,23 +8178,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7588,23 +8242,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7647,23 +8306,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7706,23 +8370,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7765,23 +8434,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7824,23 +8498,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7883,23 +8562,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -7942,23 +8626,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8001,23 +8690,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8060,23 +8754,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8119,23 +8818,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8178,23 +8882,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8237,23 +8946,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8296,23 +9010,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8355,23 +9074,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8414,23 +9138,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8473,23 +9202,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8532,23 +9266,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8591,23 +9330,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8650,23 +9394,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8709,23 +9458,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8768,23 +9522,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8827,23 +9586,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8886,23 +9650,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -8945,23 +9714,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9004,23 +9778,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9063,23 +9842,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9122,23 +9906,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9181,23 +9970,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9240,23 +10034,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9299,23 +10098,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9358,23 +10162,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9417,23 +10226,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9476,23 +10290,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9535,23 +10354,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9594,23 +10418,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9653,23 +10482,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9712,23 +10546,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9771,23 +10610,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9830,23 +10674,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9889,23 +10738,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -9948,23 +10802,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
@@ -10007,23 +10866,28 @@
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
-          <pose>0 0 0 0 0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>30</mu>
+                <mu2>30</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
-                <kp>0.0</kp>
-                <kd>0.0</kd>
-                <max_vel>0.0</max_vel>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
                 <min_depth>0.002</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
+          <max_contacts>10</max_contacts>
         </collision>
         <visual name="visual">
           <geometry>
